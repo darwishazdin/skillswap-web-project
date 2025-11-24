@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - SkillSwap</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="nav-logo-link">SkillSwap</a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="browse-skills.html" class="nav-link">Browse Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="exchange.html" class="nav-link">Exchange</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link active login-btn">Login</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="auth-section">
+        <div class="auth-container">
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">Login</button>
+            <button class="auth-tab" data-tab="signup">Sign Up</button>
+          </div>
+
+          <form id="loginForm" class="auth-form active">
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+          </form>
+
+          <form id="signupForm" class="auth-form">
+            <input type="text" placeholder="Full Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="password" placeholder="Password" required />
+            <button type="submit">Create Account</button>
+          </form>
+
+          <div class="auth-footer">
+            <p><a href="index.html">← Back to Home</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 SkillSwap. A project by Culers Team - Darwish, Intisar,
+          Murad
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

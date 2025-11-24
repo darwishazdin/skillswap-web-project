@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - SkillSwap</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="nav-logo-link">SkillSwap</a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="browse-skills.html" class="nav-link">Browse Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="exchange.html" class="nav-link">Exchange</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link login-btn">Login</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>About SkillSwap</h1>
+          <p>
+            Learn more about our mission and how we're building a community of
+            learners
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>Our Mission</h2>
+              <p>
+                SkillSwap was created to break down financial barriers to
+                learning and create meaningful connections within our community.
+                We believe that everyone has valuable skills to share and that
+                learning should be accessible to all.
+              </p>
+
+              <h2>How It Started</h2>
+              <p>
+                This project began as a web development course project at The
+                American University of Kurdistan. Our team, Culers, recognized
+                the need for a platform where students and community members
+                could exchange knowledge without financial constraints.
+              </p>
+
+              <h2>What We Stand For</h2>
+              <ul class="values-list">
+                <li>
+                  <strong>Accessibility:</strong> Learning opportunities for
+                  everyone, regardless of financial situation
+                </li>
+                <li>
+                  <strong>Community:</strong> Building connections and trust
+                  through shared learning
+                </li>
+                <li>
+                  <strong>Empowerment:</strong> Helping people recognize and
+                  share their unique talents
+                </li>
+                <li>
+                  <strong>Collaboration:</strong> Creating win-win situations
+                  through skill exchanges
+                </li>
+              </ul>
+            </div>
+
+            <div class="team-section">
+              <h2>Meet Our Team</h2>
+              <div class="team-grid">
+                <div class="team-member">
+                  <div class="member-avatar">👨‍💻</div>
+                  <h3>Darwish Khalil</h3>
+                  <p>Frontend Developer</p>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar">👩‍🎨</div>
+                  <h3>Intisar Farman</h3>
+                  <p>UI/UX Designer</p>
+                </div>
+                <div class="team-member">
+                  <div class="member-avatar">👨‍🔧</div>
+                  <h3>Murad Saleh</h3>
+                  <p>JavaScript Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <h3>Get In Touch</h3>
+              <p>Have questions or suggestions? We'd love to hear from you!</p>
+              <div class="contact-details">
+                <p>📧 Email: culers-team@skillswap.edu</p>
+                <p>🏫 University: The American University of Kurdistan</p>
+                <p>📍 Location: Kurdistan, Iraq</p>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Your Name:</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Your Email:</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message:</label>
+                <textarea
+                  id="contactMessage"
+                  class="form-textarea"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 SkillSwap. A project by Culers Team - Darwish, Intisar,
+          Murad
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

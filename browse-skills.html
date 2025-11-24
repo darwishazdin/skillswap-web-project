@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Skills - SkillSwap</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="nav-logo-link">SkillSwap</a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="browse-skills.html" class="nav-link active"
+              >Browse Skills</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="exchange.html" class="nav-link">Exchange</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link login-btn">Login</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <h1>Browse Available Skills</h1>
+          <p>Find people who can teach you what you want to learn</p>
+        </div>
+      </section>
+
+      <section class="filters">
+        <div class="container">
+          <div class="filter-group">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search skills..."
+              class="search-input"
+            />
+            <select id="categoryFilter" class="filter-select">
+              <option value="">All Categories</option>
+              <option value="technology">Technology</option>
+              <option value="languages">Languages</option>
+              <option value="creative">Creative Arts</option>
+              <option value="academic">Academic</option>
+              <option value="sports">Sports & Fitness</option>
+              <option value="life-skills">Life Skills</option>
+            </select>
+            <select id="levelFilter" class="filter-select">
+              <option value="">All Levels</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills-listing">
+        <div class="container">
+          <div id="skillsContainer" class="skills-grid">
+            <!-- Skills will be loaded dynamically -->
+          </div>
+          <div id="noResults" class="no-results" style="display: none">
+            <p>
+              No skills found matching your criteria. Try adjusting your
+              filters.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 SkillSwap. A project by Culers Team - Darwish, Intisar,
+          Murad
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/browse.js"></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile - SkillSwap</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="nav-logo-link">SkillSwap</a>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="browse-skills.html" class="nav-link">Browse Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="profile.html" class="nav-link active">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a href="exchange.html" class="nav-link">Exchange</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item" id="authNavItem">
+            <a href="login.html" class="nav-link login-btn">Login</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div id="loginRequired" class="login-required" style="display: none">
+        <div class="container">
+          <div class="login-prompt">
+            <h2>Please Login</h2>
+            <p>You need to be logged in to view and manage your profile.</p>
+            <a href="login.html" class="btn btn-primary">Login Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="profileContent">
+        <section class="page-header">
+          <div class="container">
+            <h1>My Profile</h1>
+            <p>Manage your skills and learning goals</p>
+          </div>
+        </section>
+
+        <section class="profile-section">
+          <div class="container">
+            <div class="profile-setup" id="profileSetup">
+              <h3>Create Your Profile</h3>
+              <form id="profileForm">
+                <div class="form-group">
+                  <label for="userName">Full Name:</label>
+                  <input
+                    type="text"
+                    id="userName"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="userLocation">Location:</label>
+                  <input
+                    type="text"
+                    id="userLocation"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="userBio">Bio:</label>
+                  <textarea
+                    id="userBio"
+                    class="form-textarea"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Save Profile
+                </button>
+              </form>
+            </div>
+
+            <div
+              class="profile-display"
+              id="profileDisplay"
+              style="display: none"
+            >
+              <div class="profile-card">
+                <div class="profile-header">
+                  <div class="profile-avatar">👤</div>
+                  <div class="profile-info">
+                    <h2 id="displayName">User Profile</h2>
+                    <p class="profile-location" id="displayLocation">
+                      📍 Location
+                    </p>
+                    <p class="profile-bio" id="displayBio">
+                      Bio will appear here
+                    </p>
+                    <button id="logoutBtn" class="btn btn-secondary btn-small">
+                      Logout
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-container">
+                <div class="skills-column">
+                  <h3>Skills I Can Teach</h3>
+                  <div class="skills-list" id="teachSkillsList">
+                    <div class="skill-item">
+                      <span class="skill-name">Web Development</span>
+                      <span class="skill-level intermediate">Intermediate</span>
+                      <button class="btn-remove">×</button>
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-name">Graphic Design</span>
+                      <span class="skill-level beginner">Beginner</span>
+                      <button class="btn-remove">×</button>
+                    </div>
+                  </div>
+                  <form class="add-skill-form" id="addTeachForm">
+                    <input
+                      type="text"
+                      placeholder="Add a skill you can teach"
+                      class="skill-input"
+                      required
+                    />
+                    <select class="level-select" required>
+                      <option value="">Select level</option>
+                      <option value="beginner">Beginner</option>
+                      <option value="intermediate">Intermediate</option>
+                      <option value="advanced">Advanced</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
+                </div>
+
+                <div class="skills-column">
+                  <h3>Skills I Want to Learn</h3>
+                  <div class="skills-list" id="learnSkillsList">
+                    <div class="skill-item">
+                      <span class="skill-name">Photography</span>
+                      <span class="skill-level beginner">Beginner</span>
+                      <button class="btn-remove">×</button>
+                    </div>
+                    <div class="skill-item">
+                      <span class="skill-name">Spanish Language</span>
+                      <span class="skill-level beginner">Beginner</span>
+                      <button class="btn-remove">×</button>
+                    </div>
+                  </div>
+                  <form class="add-skill-form" id="addLearnForm">
+                    <input
+                      type="text"
+                      placeholder="Add a skill you want to learn"
+                      class="skill-input"
+                      required
+                    />
+                    <select class="level-select" required>
+                      <option value="">Select level</option>
+                      <option value="beginner">Beginner</option>
+                      <option value="intermediate">Intermediate</option>
+                      <option value="advanced">Advanced</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2025 SkillSwap. A project by Culers Team - Darwish, Intisar,
+          Murad
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

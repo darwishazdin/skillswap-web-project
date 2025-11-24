@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Exchange - SkillSwap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link">SkillSwap</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="browse-skills.html" class="nav-link">Browse Skills</a></li>
+                <li class="nav-item"><a href="profile.html" class="nav-link">Profile</a></li>
+                <li class="nav-item"><a href="exchange.html" class="nav-link active">Exchange</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="login.html" class="nav-link login-btn">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="loginRequired" class="login-required" style="display: none;">
+            <div class="container">
+                <div class="login-prompt">
+                    <h2>Please Login</h2>
+                    <p>You need to be logged in to request skill exchanges.</p>
+                    <a href="login.html" class="btn btn-primary">Login Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="exchangeContent">
+            <section class="page-header">
+                <div class="container">
+                    <h1>Request Skill Exchange</h1>
+                    <p>Connect with other members and arrange skill exchanges</p>
+                </div>
+            </section>
+
+            <section class="exchange-section">
+                <div class="container">
+                    <div class="exchange-form-container">
+                        <form id="exchangeForm" class="exchange-form">
+                            <div class="form-group">
+                                <label for="skillSelect">Select Skill to Learn:</label>
+                                <select id="skillSelect" class="form-select" required>
+                                    <option value="">Choose a skill...</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="graphic-design">Graphic Design</option>
+                                    <option value="spanish">Spanish Language</option>
+                                    <option value="photography">Photography</option>
+                                    <option value="cooking">Cooking</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="offerSelect">What will you offer in return?</label>
+                                <select id="offerSelect" class="form-select" required>
+                                    <option value="">Choose your skill to offer...</option>
+                                    <option value="english">English Language</option>
+                                    <option value="web-dev-help">Web Development Help</option>
+                                    <option value="design">Graphic Design</option>
+                                    <option value="math-tutoring">Math Tutoring</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferredDate">Preferred Date:</label>
+                                <input type="date" id="preferredDate" class="form-input" required min="2025-01-01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferredTime">Preferred Time:</label>
+                                <select id="preferredTime" class="form-select" required>
+                                    <option value="">Select time...</option>
+                                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (1 PM - 5 PM)</option>
+                                    <option value="evening">Evening (6 PM - 9 PM)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="meetingType">Meeting Type:</label>
+                                <select id="meetingType" class="form-select" required>
+                                    <option value="">Select type...</option>
+                                    <option value="in-person">In Person</option>
+                                    <option value="online">Online</option>
+                                    <option value="both">Either</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Additional Message:</label>
+                                <textarea id="message" class="form-textarea" placeholder="Introduce yourself and specify any details about the skill exchange..." rows="4"></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large">Send Exchange Request</button>
+                            </div>
+                        </form>
+
+                        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+                            <div class="success-icon">✓</div>
+                            <h3>Exchange Request Sent!</h3>
+                            <p>Your skill exchange request has been submitted successfully. The other member will be notified and should respond within 24 hours.</p>
+                            <button id="newRequestBtn" class="btn btn-secondary">Send Another Request</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SkillSwap. A project by Culers Team - Darwish, Intisar, Murad</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/exchange.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 200px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-input,
+  .filter-select {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .add-skill-form {
+    flex-direction: column;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .features-grid,
+  .skills-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .page-header {
+    padding: 80px 0 40px;
+  }
+
+  .auth-section {
+    padding: 1rem;
+    margin-top: 70px;
+  }
+
+  .auth-container {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .features h2,
+  .featured-skills h2 {
+    font-size: 2rem;
+  }
+
+  .exchange-form-container,
+  .contact-content {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+
+  .profile-card {
+    padding: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .auth-tabs {
+    flex-direction: column;
+  }
+
+  .auth-tab {
+    text-align: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .footer,
+  .hero-buttons,
+  .filters,
+  .add-skill-form,
+  .form-actions {
+    display: none;
+  }
+
+  .hero {
+    background: none;
+    color: black;
+    padding: 20px 0;
+  }
+
+  .page-header {
+    background: none;
+    color: black;
+    padding: 20px 0;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
